@@ -4,6 +4,18 @@ variable "project" {
   default     = "your-project-id"
 }
 
+variable "service_account_email" {
+  description = "The service account email"
+  type        = string
+  default     = "your-service-account@your-project-id.iam.gserviceaccount.com"
+}
+
+variable "credentials_file" {
+  description = "Path to the Google Cloud credentials JSON file"
+  type        = string
+  default     = "/path/to/your/credentials.json"
+}
+
 variable "region" {
   description = "The Google Cloud region"
   type        = string
@@ -16,10 +28,10 @@ variable "zone" {
   default     = "your-zone"
 }
 
-variable "credentials_file" {
-  description = "Path to the Google Cloud credentials JSON file"
+variable "username" {
+  description = "The username for SSH access on cluster"
   type        = string
-  default     = "/path/to/your/credentials.json"
+  default     = "your-username"
 }
 
 variable "machine_type" {
@@ -34,22 +46,10 @@ variable "image" {
   default     = "ubuntu-os-cloud/ubuntu-2004-lts"
 }
 
-variable "username" {
-  description = "The username for SSH access"
-  type        = string
-  default     = "your-username"
-}
-
 variable "pod_network_cidr" {
   description = "CIDR for the pod network"
   type        = string
   default     = "10.244.0.0/16"
-}
-
-variable "service_account_email" {
-  description = "The service account email"
-  type        = string
-  default     = "your-service-account@your-project-id.iam.gserviceaccount.com"
 }
 
 variable "control_plane_count" {
