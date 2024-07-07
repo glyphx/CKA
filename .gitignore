@@ -9,6 +9,7 @@ terraform.tfvars.json
 *.log
 crash.log
 terraform.*
+.terraform.lock.hcl
 # Local .terraform directories
 **/.terraform/*
 
