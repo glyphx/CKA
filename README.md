@@ -35,7 +35,7 @@ Ensure the following APIs are enabled in your Google Cloud project:
    gcloud services enable compute.googleapis.com
    ```
 
-![Enable APIs](path_to_your_image)
+![Enable APIs](API.png)
 
 ## Step 2: Set Up Google Cloud Service Account
 
@@ -53,7 +53,7 @@ Ensure the following APIs are enabled in your Google Cloud project:
 7. Click on **Done**.
 8. After creating the service account, go to the service account details and create a new key. Download the key file in JSON format and save it to a secure location.
 
-![Service Account Setup](path_to_your_image)
+![Service Account Setup](SA.png)
 
 ## Step 3: Clone the Repository
 
@@ -64,7 +64,7 @@ cd CKA
 
 ## Step 4: Configure Variables
 
-Create a `terraform.tfvars` file in the root of the project and add your GCP credentials and desired configuration:
+Update the `variables.tf` file in the root of the project and add your GCP credentials and desired configuration:
 
 ```hcl
 project               = "your-gcp-project-id"
@@ -126,11 +126,11 @@ terraform destroy
 
 ## Troubleshooting
 
-If you encounter any issues, please check the logs on the master and worker nodes located in `/var/log/install.log` for detailed error messages.
+If you encounter any issues, please check the logs on the master and worker nodes located in `/var/log/install.log` & `/var/log/startup-script.log` for detailed error messages.
 
 ## Contributing
 
-Contributions are welcome! Please submit a pull request with your changes, ensuring all tests pass before submission.
+Contributions are welcome! Please submit a pull request with your changes.
 
 ## License
 
